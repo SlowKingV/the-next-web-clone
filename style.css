@@ -122,7 +122,7 @@ header nav ul a {
   width: 100%;
 }
 
-.latest > .wrap-row {
+.wrap-row {
   max-width: 25%;
   padding: 10px;
   background-color: lightblue;
@@ -136,6 +136,7 @@ header nav ul a {
   display: flex;
   flex-wrap: wrap;
   margin: 50px 10px;
+  height: 293px;
 }
 
 .fundingTop {
@@ -153,4 +154,69 @@ header nav ul a {
 
 .fundingTop ul li {
   display: inline-block;
+}
+
+.funding article {
+  position: relative;
+  width: 560px;
+  background-color: lightgrey;
+}
+
+.funding article img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.funding .fundingHeader div {
+  padding: 10px 0 10px 70px;
+}
+
+.funding .fundingHeader div:nth-of-type(1) {
+  background-color: orangered;
+}
+
+.funding .fundingHeader div:nth-of-type(2) {
+  background-color: grey;
+}
+
+.funding .fundingInfo {
+  background-color: lightgray;
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.topics article {
+  padding: 20px;
+  max-width: 33.3333%;
+}
+
+.topics article > * {
+  padding: 15px;
+}
+
+.topics article figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 320px;
+  background-color: lightpink;
+}
+
+.topics article ul {
+  padding: 0 15px;
+}
+
+.topics article ul li {
+  border-bottom: 1px solid #bbb;
+  padding: 5px 0;
+}
+
+.topics article ul li::marker {
+  color: orangered;
 }
