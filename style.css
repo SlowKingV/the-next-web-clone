@@ -1,9 +1,36 @@
 @font-face {
   font-family: 'Maquette';
   src:
-    url('1d2942afac1e8d76b1b82d346ddb0f27.woff2') format('woff2'),
-    url('1d2942afac1e8d76b1b82d346ddb0f27.woff') format('woff');
-  font-weight: normal;
+    url('./fonts/55d907e079c05cafa927bedec8150e10.woff2') format('woff2'),
+    url('./fonts/55d907e079c05cafa927bedec8150e10.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avalon';
+  src:
+    url('./fonts/75548a8e5e9f0c0f281e812367523ad3.woff2') format('woff2'),
+    url('./fonts/75548a8e5e9f0c0f281e812367523ad3.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Maquette';
+  src:
+    url('./fonts/0a21b0e4d77f19468fb662a152b8672b.woff2') format('woff2'),
+    url('./fonts/0a21b0e4d77f19468fb662a152b8672b.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Shentox';
+  src:
+    url('./fonts/Shentox-Medium.woff2') format('woff2'),
+    url('./fonts/Shentox-Medium.woff') format('woff');
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -13,15 +40,15 @@
   -webkit-box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Maquette', sans-serif;
 }
 
-body > *:not(.nomove) {
+body>*:not(.nomove) {
   position: relative;
   top: 90px;
 }
 
 .outLinks {
+  font-family: 'Maquette', sans-serif;
   width: 100%;
   position: fixed;
   display: flex;
@@ -53,10 +80,25 @@ header {
   justify-content: space-between;
   width: 100%;
   z-index: 15;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.15);
 }
 
 header * {
   height: 100%;
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-left: 1px solid rgb(226, 226, 226);
+}
+
+header i {
+  color: #bfbfbf;
+  height: 16px;
 }
 
 header nav ul li {
@@ -66,6 +108,7 @@ header nav ul li {
 }
 
 header nav ul a {
+  font-family: Shentox, sans-serif;
   display: inline-block;
   display: flex;
   align-items: center;
@@ -80,11 +123,11 @@ header nav ul a {
 }
 
 .trending {
+  color: white;
   margin: 0 10px;
   display: grid;
   height: 60vh;
   max-height: 560px;
-  background: red;
   gap: 10px;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(6, 1fr);
@@ -97,39 +140,130 @@ header nav ul a {
     "a1 a3";
 }
 
+.trending article {
+  position: relative;
+}
+
+.gradient {
+  height: 100%;
+  background: linear-gradient(-13deg, transparent, #ff6b6b);
+}
+
+.trending article .gradient {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.trending article h2 {
+  font-family: Avalon, sans-serif;
+  font-size: 28px;
+}
+
+.trending .biggerTitle {
+  font-size: 52px;
+}
+
+.bottomTrend span:nth-child(1) {
+  font-family: Shentox, sans-serif;
+  font-size: 14px;
+}
+
+.bottomTrend span:nth-child(3) {
+  font-family: Maquette, sans-serif;
+  font-size: 13px;
+}
+
 .trending article:nth-of-type(1) {
+  background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Snag_3cdaf987-796x435.png") no-repeat;
+  background-size: cover;
   grid-area: a1;
 }
 
 .trending article:nth-of-type(2) {
+  background: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/06/Mac-Pro-on-stage-796x419.jpg);
+  background-size: cover;
   grid-area: a2;
 }
 
 .trending article:nth-of-type(3) {
+  background: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Bioshock-796x417.jpg);
+  background-size: cover;
   grid-area: a3;
+}
+
+.topTrend,
+.bottomTrend {
+  padding: 23px;
+}
+
+.topTrend {
+  font-family: 'Maquette', sans-serif;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottomTrend {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.topTrend img {
+  height: 96px;
+}
+
+.blackGradient {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, black);
 }
 
 .latest {
   display: flex;
   flex-wrap: wrap;
   margin: 50px 10px;
-  background-color: blue;
 }
 
 .latest h2 {
-  display: block;
-  flex: none;
   width: 100%;
+}
+
+.latest h2,
+.funding h2 {
+  display: block;
+  font-family: Avalon, sans-serif;
+  font-size: 28px;
+  color: #f42;
+  flex: none;
+  margin-bottom: 24px;
 }
 
 .wrap-row {
   max-width: 25%;
   padding: 10px;
-  background-color: lightblue;
 }
 
-.latest > article img {
+.latest article h3 {
+  font-family: Maquette, sans-serif;
+  font-size: 16px;
+}
+
+.latest article span {
+  font-family: Maquette, sans-serif;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.latest>article img {
   width: 100%;
+  height: 135px;
 }
 
 .funding {
@@ -137,6 +271,17 @@ header nav ul a {
   flex-wrap: wrap;
   margin: 50px 10px;
   height: 293px;
+  color: white;
+}
+
+.funding strong {
+  color: black;
+}
+
+.fundingHeader span {
+  font-family: Shentox, sans-serif;
+  font-size: 12px;
+  color: #aaa;
 }
 
 .fundingTop {
@@ -150,16 +295,33 @@ header nav ul a {
 
 .fundingTop ul {
   list-style: none;
+  color: #f42;
+  margin-bottom: 24px;
 }
 
 .fundingTop ul li {
+  padding: 0 11px;
   display: inline-block;
+}
+
+.fundingTop a {
+  text-decoration: none;
+  color: #f42;
+}
+
+.fundingTop a:hover {
+  color: black;
+}
+
+.fundingTop ul li:nth-child(2) {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: #f42;
 }
 
 .funding article {
   position: relative;
   width: 560px;
-  background-color: lightgrey;
 }
 
 .funding article img {
@@ -168,8 +330,16 @@ header nav ul a {
   left: 20px;
 }
 
+.fundingHeader {
+  font-family: Avalon, sa;
+}
+
+.fundingHeader img {
+  width: 60px;
+}
+
 .funding .fundingHeader div {
-  padding: 10px 0 10px 70px;
+  padding: 10px 0 10px 80px;
 }
 
 .funding .fundingHeader div:nth-of-type(1) {
@@ -177,11 +347,28 @@ header nav ul a {
 }
 
 .funding .fundingHeader div:nth-of-type(2) {
-  background-color: grey;
+  background-color: #feebe8;
 }
 
 .funding .fundingInfo {
-  background-color: lightgray;
+  background: #fffaf8;
+  color: #555;
+  padding: 16px;
+  font-size: 13px;
+  font-family: Maquette, sans-serif;
+}
+
+.fundingInfo i {
+  color: black;
+}
+
+.fundingFooter {
+  background: #fffaf8;
+  border-top: 1px solid #ff442240;
+  color: #555;
+  padding: 10px 16px 16px;
+  font-size: 12px;
+  font-family: Maquette, sans-serif;
 }
 
 .topics {
@@ -195,7 +382,7 @@ header nav ul a {
   max-width: 33.3333%;
 }
 
-.topics article > * {
+.topics article>* {
   padding: 15px;
 }
 
