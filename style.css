@@ -276,6 +276,7 @@ header nav ul a {
 
 .funding strong {
   color: black;
+  font-size: 18px;
 }
 
 .fundingHeader span {
@@ -305,6 +306,8 @@ header nav ul a {
 }
 
 .fundingTop a {
+  font-family: Maquette, sans-serif;
+  font-size: 16px;
   text-decoration: none;
   color: #f42;
 }
@@ -369,6 +372,10 @@ header nav ul a {
   padding: 10px 16px 16px;
   font-size: 12px;
   font-family: Maquette, sans-serif;
+}
+
+.fundingFooter span:nth-last-child(1) {
+  color: #999;
 }
 
 .topics {
