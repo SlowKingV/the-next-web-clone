@@ -97,13 +97,17 @@ header * {
   height: 100%;
 }
 
-.iconWrap {
+.iconWrap, .menuWrap {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 48px;
   height: 48px;
   border-left: 1px solid rgb(226, 226, 226);
+}
+
+.menuWrap {
+  display: none;
 }
 
 header i {
@@ -294,7 +298,7 @@ header nav ul a {
   font-size: 18px;
 }
 
-.wrap-row a:hover~h3 {
+.wrap-row a:hover~ div h3 {
   color: #f42;
   text-decoration: underline;
 }
@@ -312,7 +316,6 @@ header nav ul a {
 
 .latest>article img {
   width: 100%;
-  height: 135px;
 }
 
 .funding {
@@ -656,7 +659,6 @@ header nav ul a {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-between;
 }
 
 .deals h2 {
@@ -664,7 +666,7 @@ header nav ul a {
 }
 
 .deals article {
-  width: 270px;
+  max-width: 25%;
   padding: 12px;
 }
 
@@ -825,4 +827,211 @@ footer {
   font-family: Maquette, sans-serif;
   font-size: 13px;
   padding: 39px 0;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .outLinks, header {
+    padding-left: 116px;
+  }
+
+  header nav ul li {
+    margin-left: 12px;
+  }
+
+  .trending .biggerTitle {
+    font-size: 40px;
+  }
+
+  .trending article h2 {
+    font-size: 20px;
+  }
+
+  .trending article .gradient {
+    display: none;
+  }
+
+  .topTrend {
+    width: 106px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    z-index: 200;
+    background: linear-gradient(to right bottom, rgb(204, 0, 153), rgb(255, 68, 34) 85%);
+  }
+
+  .topTrend span {
+    display: none;
+  }
+
+  .topTrend img {
+    position: relative;
+    top: 10px;
+    height: 15px;
+  }
+
+  .wrap-row {
+    max-width: 33.3333%;
+  }
+
+  .latest article h3 {
+    font-size: 14px;
+  }
+
+  .funding article:nth-last-child(1) {
+    display: none;
+  }
+
+  .topics article {
+    max-width: 50%;
+  }
+
+  .deals article {
+    max-width: 33.3333%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .outLinks {
+    display: none;
+  }
+
+  header {
+    top: 0;
+    justify-content: flex-end;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  .menuWrap {
+    display: flex;
+  }
+
+  .topTrend {
+    height: 48px;
+  }
+
+  .topTrend img {
+    top: -5px;
+  }
+
+  body>*:not(.nomove) {
+    top: 56px;
+  }
+
+  .main > * {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .trending {
+    height: calc(100vh - 48px);
+    max-height: unset;
+    grid-template-areas: 
+      "a1 a1"
+      "a1 a1"
+      "a2 a2"
+      "a2 a2"
+      "a3 a3"
+      "a3 a3";
+  }
+
+  .wrap-row {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .latest > article {
+    display: flex;
+  }
+
+  .latest > article figure {
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    flex: none;
+  }
+
+  .latest > article img {
+    height: 100%;
+    width: unset;
+    margin: 0 auto;
+  }
+
+  .latest > article > div {
+    flex: 1;
+    margin-left: 15px;
+    line-height: 25px;
+  }
+
+  .fundingTop {
+    display: block;
+  }
+
+  .fundingTop ul li {
+    display: block;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+
+  .fundingTop a {
+    font-size: 14px;
+  }
+
+  .fundingTop ul li:nth-child(2) {
+    border: none;
+  }
+
+  .funding .fundingHeader div {
+    padding: 10px 0 10px 100px;
+  }
+
+  .topics {
+    width: unset;
+  }
+
+  .topics article {
+    max-width: 100%;
+  }
+
+  .deals figure div {
+    display: none;
+  }
+
+  .deals figure {
+    width: 75px;
+    height: 75px;
+    flex: none;
+  }
+
+  .deals article {
+    display: flex;
+    max-width: 100%;
+  }
+
+  .deals article > div {
+    margin-left: 15px;
+  }
+
+  .deals article a {
+    font-size: 14px;
+  }
+  .deals article > div span:nth-child(1) {
+    font-size: 12px;
+  }
+
+  .deals article > div span:nth-child(2) {
+    font-size: 14px;
+  }
+
+  .copyright {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
