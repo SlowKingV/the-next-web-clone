@@ -268,7 +268,7 @@ header nav ul a {
 .latest h2 a,
 .funding h2 a,
 .topics h2 a,
-.deals h2 a { 
+.deals h2 a {
   text-decoration: none;
   font-family: Avalon, sans-serif;
   font-size: 28px;
@@ -281,14 +281,20 @@ header nav ul a {
   position: relative;
 }
 
-.wrap-row a {
+.latest .wrap-row a {
   position: absolute;
   display: inline-block;
   width: 100%;
   height: 100%;
 }
 
-.wrap-row a:hover ~ h3 {
+.funding .wrap-row>a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.wrap-row a:hover~h3 {
   color: #f42;
   text-decoration: underline;
 }
@@ -406,6 +412,21 @@ header nav ul a {
   background: #fffaf8;
 }
 
+.funding .fundingInfo a {
+  color: #555;
+  text-decoration: none;
+  font-size: 13px;
+  font-family: Maquette, sans-serif;
+}
+
+.funding .fundingInfo a:hover {
+  color: black;
+}
+
+.topics h2 a:hover {
+  color: black;
+}
+
 .fundingInfo i {
   color: black;
 }
@@ -420,6 +441,13 @@ header nav ul a {
   height: 100%;
 }
 
+.fundingFooter a {
+  color: #AAA;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: Maquette, sans-serif;
+}
+
 .fundingFooter span:nth-last-child(1) {
   color: #999;
 }
@@ -431,7 +459,7 @@ header nav ul a {
 }
 
 .topics h2 {
-  margin-bottom: 0;
+  margin-bottom: 14px;
 }
 
 .topics article {
@@ -439,12 +467,13 @@ header nav ul a {
   max-width: 33.3333%;
 }
 
-.topics article > ul {
+.topics article>ul {
   padding: 15px;
 }
 
 .topics article figure {
   color: #fff;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -452,6 +481,16 @@ header nav ul a {
   height: 320px;
   background-position: center;
   background-size: cover;
+}
+
+.topics figure a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.topics figure a:hover~figcaption h3 {
+  text-decoration: underline rgba(255, 255, 255, 0.6);
 }
 
 .topics article:nth-of-type(1) figure {
@@ -528,10 +567,16 @@ header nav ul a {
   font-family: Shentox, sans-serif;
 }
 
-.topicsLatest h4 {
+.topicsLatest h4 a {
   font-family: Maquette, sans-serif;
   font-size: 14px;
+  text-decoration: none;
+  color: unset;
   font-weight: 700;
+}
+
+.topicsLatest h4 a:hover {
+  text-decoration: underline rgba(255, 68, 34, 0.2);
 }
 
 .topicsLatest .sideImg {
@@ -540,6 +585,12 @@ header nav ul a {
   background-size: cover;
   background-position: center;
   flex: none;
+}
+
+.topicsLatest .sideImg a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 
 .topics article:nth-of-type(1) .sideImg {
@@ -578,6 +629,11 @@ header nav ul a {
   padding: 0 15px;
 }
 
+.topics article ul li a {
+  text-decoration: none;
+  color: unset;
+}
+
 .topics article ul li {
   border-bottom: 1px solid #eee;
   padding: 10px 0;
@@ -600,8 +656,8 @@ header nav ul a {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: space-between;
 }
-
 
 .deals h2 {
   width: 100%;
@@ -619,6 +675,12 @@ header nav ul a {
   height: 201px;
   background-position: left;
   background-size: cover;
+}
+
+.deals figure a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
 }
 
 .deals figure div {
@@ -685,14 +747,14 @@ header nav ul a {
   font-weight: 700;
 }
 
-.deals article > div span:nth-child(1) {
+.deals article>div span:nth-child(1) {
   font-family: Maquette, sans-serif;
   font-size: 13px;
   color: #aaa;
   text-decoration: line-through;
 }
 
-.deals article > div span:nth-child(2) {
+.deals article>div span:nth-child(2) {
   font-family: Maquette, sans-serif;
   font-size: 16px;
   color: #555;
