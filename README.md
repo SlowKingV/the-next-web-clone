@@ -33,7 +33,7 @@ For resizing they stay almost the same until the viewport is really small, then 
 - VSCode
 
 ## Live Demo
-You can check a liver version here:
+You can check a live version here:
 
 ## Author
 
