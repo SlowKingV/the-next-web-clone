@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'Maquette';
   src:
-    url('./fonts/55d907e079c05cafa927bedec8150e10.woff2') format('woff2'),
-    url('./fonts/55d907e079c05cafa927bedec8150e10.woff') format('woff');
+    url('../fonts/55d907e079c05cafa927bedec8150e10.woff2') format('woff2'),
+    url('../fonts/55d907e079c05cafa927bedec8150e10.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
@@ -10,8 +10,8 @@
 @font-face {
   font-family: 'Avalon';
   src:
-    url('./fonts/75548a8e5e9f0c0f281e812367523ad3.woff2') format('woff2'),
-    url('./fonts/75548a8e5e9f0c0f281e812367523ad3.woff') format('woff');
+    url('../fonts/75548a8e5e9f0c0f281e812367523ad3.woff2') format('woff2'),
+    url('../fonts/75548a8e5e9f0c0f281e812367523ad3.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
@@ -19,8 +19,8 @@
 @font-face {
   font-family: 'Maquette';
   src:
-    url('./fonts/0a21b0e4d77f19468fb662a152b8672b.woff2') format('woff2'),
-    url('./fonts/0a21b0e4d77f19468fb662a152b8672b.woff') format('woff');
+    url('../fonts/0a21b0e4d77f19468fb662a152b8672b.woff2') format('woff2'),
+    url('../fonts/0a21b0e4d77f19468fb662a152b8672b.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }
@@ -28,8 +28,8 @@
 @font-face {
   font-family: 'Shentox';
   src:
-    url('./fonts/Shentox-Medium.woff2') format('woff2'),
-    url('./fonts/Shentox-Medium.woff') format('woff');
+    url('../fonts/Shentox-Medium.woff2') format('woff2'),
+    url('../fonts/Shentox-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }
@@ -375,7 +375,7 @@ header i {
 }
 
 .trending article:nth-of-type(1) {
-  background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Snag_3cdaf987-796x435.png") no-repeat;
+  background: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Snag_3cdaf987-796x435.png) no-repeat;
   background-size: cover;
   background-position: center;
   grid-area: a1;
