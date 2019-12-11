@@ -46,6 +46,10 @@ header * {
   height: 100%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 body > *:not(.nomove) {
   position: relative;
   top: 90px;
@@ -839,6 +843,7 @@ footer {
 
 .iconWrap:hover .bottomOne {
   color: #000;
+  left: 3px;
 }
 
 .topOne {
