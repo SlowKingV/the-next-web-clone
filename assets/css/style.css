@@ -1,0 +1,1071 @@
+@font-face {
+  font-family: 'Maquette';
+  src:
+    url('../fonts/55d907e079c05cafa927bedec8150e10.woff2') format('woff2'),
+    url('../fonts/55d907e079c05cafa927bedec8150e10.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avalon';
+  src:
+    url('../fonts/75548a8e5e9f0c0f281e812367523ad3.woff2') format('woff2'),
+    url('../fonts/75548a8e5e9f0c0f281e812367523ad3.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Maquette';
+  src:
+    url('../fonts/0a21b0e4d77f19468fb662a152b8672b.woff2') format('woff2'),
+    url('../fonts/0a21b0e4d77f19468fb662a152b8672b.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Shentox';
+  src:
+    url('../fonts/Shentox-Medium.woff2') format('woff2'),
+    url('../fonts/Shentox-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header * {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body > *:not(.nomove) {
+  position: relative;
+  top: 90px;
+}
+
+.outLinks {
+  font-family: 'Maquette', sans-serif;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  padding: 0 10px;
+  font-size: 13px;
+  z-index: 10;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.outLinks li {
+  padding-left: 12px;
+}
+
+.outLinks ul {
+  display: flex;
+  color: rgba(255, 255, 255, 0.6);
+  list-style: none;
+  height: 32px;
+  align-items: center;
+}
+
+header nav ul a {
+  font-family: Shentox, sans-serif;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.fundingTop a {
+  font-family: Maquette, sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: #f42;
+}
+
+.fundingFooter a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: Maquette, sans-serif;
+}
+
+.outLinks ul a {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Maquette', sans-serif;
+  text-decoration: none;
+}
+
+.trending article a {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.deals h2 a,
+.funding h2 a,
+.latest h2 a,
+.topics h2 a {
+  text-decoration: none;
+  font-family: Avalon, sans-serif;
+  font-size: 28px;
+  color: #f42;
+}
+
+.topics figure a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.topicsLatest h4 a {
+  font-family: Maquette, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: unset;
+  font-weight: 700;
+}
+
+.deals figure a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.deals article a {
+  color: #000;
+  text-decoration: none;
+}
+
+.topics article ul li a {
+  text-decoration: none;
+  color: unset;
+}
+
+header nav ul li:hover a {
+  color: #000;
+}
+
+.latest .wrap-row a {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.funding .wrap-row > a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.fundingTop a:hover {
+  color: black;
+}
+
+.funding .fundingInfo a {
+  color: #555;
+  text-decoration: none;
+  font-size: 13px;
+  font-family: Maquette, sans-serif;
+}
+
+.topicsLatest .sideImg a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.outLinks ul a:hover {
+  color: white;
+}
+
+header {
+  position: fixed;
+  top: 32px;
+  height: 48px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 15;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.15);
+}
+
+.iconWrap,
+.menuWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-left: 1px solid rgb(226, 226, 226);
+}
+
+.menuWrap {
+  display: none;
+}
+
+header i {
+  color: #bfbfbf;
+  height: 16px;
+}
+
+.iconWrap:hover {
+  cursor: pointer;
+}
+
+.fundingInfo i {
+  color: black;
+}
+
+.iconWrap:hover i {
+  color: #555;
+}
+
+.main {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1192px;
+}
+
+.trending {
+  color: white;
+  margin: 0 10px;
+  display: grid;
+  height: 60vh;
+  max-height: 560px;
+  gap: 10px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    "a1 a2"
+    "a1 a2"
+    "a1 a2"
+    "a1 a3"
+    "a1 a3"
+    "a1 a3";
+}
+
+.trending article {
+  position: relative;
+}
+
+.gradient {
+  height: 100%;
+  background: linear-gradient(-13deg, transparent, #ff6b6b);
+}
+
+.trending article .gradient {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.latest h2 {
+  width: 100%;
+}
+
+.deals h2,
+.funding h2,
+.latest h2,
+.topics h2 {
+  display: block;
+  font-family: Avalon, sans-serif;
+  font-size: 28px;
+  color: #f42;
+  flex: none;
+  margin-bottom: 24px;
+}
+
+.topics > h2 {
+  display: none;
+}
+
+.topics h2 {
+  margin-bottom: 14px;
+}
+
+.deals h2 {
+  width: 100%;
+}
+
+.trending article h2 {
+  font-family: Avalon, sans-serif;
+  font-size: 28px;
+}
+
+.trending .biggerTitle {
+  font-size: 52px;
+}
+
+.fundingHeader span {
+  font-family: Shentox, sans-serif;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.topicsLatest span {
+  font-size: 13px;
+  font-family: Shentox, sans-serif;
+}
+
+.latest article span {
+  font-family: Maquette, sans-serif;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.deals figure div span {
+  display: inline-block;
+  font-family: Maquette, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  transform: rotate(45deg);
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+.bottomTrend span:nth-child(1) {
+  font-family: Shentox, sans-serif;
+  font-size: 14px;
+}
+
+.bottomTrend span:nth-child(3) {
+  font-family: Maquette, sans-serif;
+  font-size: 13px;
+}
+
+.funding article {
+  position: relative;
+  width: 100%;
+  max-height: 295px;
+  overflow: hidden;
+}
+
+.topics article {
+  padding: 20px;
+  width: 33.3333%;
+}
+
+.deals article {
+  width: 25%;
+  padding: 12px;
+}
+
+.trending article:nth-of-type(1) {
+  background: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Snag_3cdaf987-796x435.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-area: a1;
+}
+
+.trending article:nth-of-type(2) {
+  background: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/06/Mac-Pro-on-stage-796x419.jpg);
+  background-size: cover;
+  grid-area: a2;
+}
+
+.trending article:nth-of-type(3) {
+  background: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Bioshock-796x417.jpg);
+  background-size: cover;
+  grid-area: a3;
+}
+
+.topTrend,
+.bottomTrend {
+  padding: 23px;
+}
+
+.topTrend {
+  font-family: 'Maquette', sans-serif;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottomTrend {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.topTrend img {
+  height: 96px;
+}
+
+.blackGradient {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, black);
+}
+
+.latest {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 10px;
+}
+
+.wrap-row {
+  max-width: 25%;
+  padding: 10px;
+  position: relative;
+}
+
+.funding article > h5 {
+  display: none;
+}
+
+.deals h3 {
+  font-family: Maquette, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.latest article h3 {
+  font-family: Maquette, sans-serif;
+  font-size: 16px;
+}
+
+.topics figure h3 {
+  font-family: Maquette, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.wrap-row a:hover ~ div h3 {
+  color: #f42;
+  text-decoration: underline;
+}
+
+.fundingHeader img {
+  width: 60px;
+}
+
+.copyright img {
+  height: 9px;
+}
+
+.latest > article img {
+  width: 100%;
+}
+
+.funding {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: 50px 10px;
+  color: white;
+}
+
+.funding strong {
+  color: black;
+  font-size: 18px;
+}
+
+.fundingTop {
+  display: flex;
+  flex: none;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.fundingTop ul {
+  list-style: none;
+  color: #f42;
+  margin-bottom: 24px;
+}
+
+.social li {
+  display: inline-block;
+  padding-top: 15px;
+}
+
+.fundingTop ul li {
+  padding: 0 11px;
+  display: inline-block;
+}
+
+.topics article ul li {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  font-family: Maquette, sans-serif;
+  font-size: 13px;
+  color: #555;
+}
+
+.fundingTop ul li:nth-child(2) {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: #f42;
+}
+
+.funding article img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.fundingHeader {
+  font-family: Avalon, sans-serif;
+}
+
+.deals figure div {
+  width: 80px;
+  height: 80px;
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/deals-ribbon.svg);
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.funding .fundingHeader div {
+  padding: 10px 0 10px 80px;
+}
+
+.topicsLatest div:not(.sideImg) {
+  padding: 15px 10px 0 15px;
+}
+
+.funding .fundingHeader div:nth-of-type(1) {
+  background-color: orangered;
+}
+
+.funding .fundingHeader div:nth-of-type(2) {
+  background-color: #feebe8;
+}
+
+.funding .fundingInfo {
+  color: #555;
+  padding: 16px;
+  font-size: 13px;
+  font-family: Maquette, sans-serif;
+  background: #fffaf8;
+}
+
+.topics h2 a:hover {
+  color: black;
+}
+
+.topicsLatest h4 a:hover {
+  text-decoration: underline rgba(255, 68, 34, 0.2);
+}
+
+.social ul:nth-of-type(2) li a {
+  font-family: Shentox, sans-serif;
+  font-size: 13px;
+  margin: 0 6px;
+  color: white;
+  text-decoration: none;
+}
+
+.funding .fundingInfo a:hover {
+  color: black;
+}
+
+.fundingFooter {
+  border-top: 1px solid #ff442240;
+  color: #555;
+  padding: 10px 16px 16px;
+  font-size: 12px;
+  font-family: Maquette, sans-serif;
+  background: #fffaf8;
+  height: 100%;
+}
+
+.fundingFooter span:nth-last-child(1) {
+  color: #999;
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.topics article > ul {
+  padding: 15px;
+}
+
+.deals figure {
+  position: relative;
+  margin-bottom: 8px;
+  width: 100%;
+  height: 201px;
+  background-position: left;
+  background-size: cover;
+}
+
+.topics article figure {
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 320px;
+  background-position: center;
+  background-size: cover;
+}
+
+.topics figure a:hover ~ figcaption h3 {
+  text-decoration: underline rgba(255, 255, 255, 0.6);
+}
+
+.topics article:nth-of-type(1) figure {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Snag_3cdaf987-368x276.png);
+}
+
+.topics article:nth-of-type(2) figure {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Snag_3c9963cb-368x276.png);
+}
+
+.topics article:nth-of-type(3) figure {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/01/nvidia-368x276.jpg);
+}
+
+.topics article:nth-of-type(4) figure {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/10/Giphy-Arcade-368x276.jpg);
+}
+
+.topics article:nth-of-type(5) figure {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/video-gaming-368x276.jpg);
+}
+
+.topics article:nth-of-type(6) figure {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/bitcoin-brazil-368x276.jpg);
+}
+
+.topics article:nth-of-type(7) figure {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/10/Amazon-Prime-Fresh-delivery-hed-368x276.jpg);
+}
+
+.topics article:nth-of-type(8) figure {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/1-5-368x276.jpg);
+}
+
+.topics figure figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  padding: 15px;
+  background: linear-gradient(transparent, black);
+}
+
+.topics figure span:nth-of-type(1) {
+  font-family: Shentox, sans-serif;
+  font-size: 13px;
+}
+
+.topics figure span:nth-of-type(2) {
+  font-family: Maquette, sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.topicsLatest {
+  padding-top: 3px;
+  display: flex;
+  background-color: rgba(255, 68, 34, 0.06);
+  color: #f42;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.topicsLatest .sideImg {
+  width: 96px;
+  height: 96px;
+  background-size: cover;
+  background-position: center;
+  flex: none;
+}
+
+.topics article:nth-of-type(1) .sideImg {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2016/02/thepiratebay-1200x600.jpg);
+}
+
+.topics article:nth-of-type(2) .sideImg {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/header-image-davinci-iq2.png);
+}
+
+.topics article:nth-of-type(3) .sideImg {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/1-copy.jpg);
+}
+
+.topics article:nth-of-type(4) .sideImg {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/Annotation-2019-09-19-121214.png);
+}
+
+.topics article:nth-of-type(5) .sideImg {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/11/Untitled-design18-1.png);
+}
+
+.topics article:nth-of-type(6) .sideImg {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/bitcoin-ransomware-1.jpg);
+}
+
+.topics article:nth-of-type(7) .sideImg {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/10/Press-Conference-with-Eric-Esrailian-Alexis-Ohanian-Hakob-Arshakyan-Yervant-Zorian-and-Serj-Tankian-hed.jpg);
+}
+
+.topics article:nth-of-type(8) .sideImg {
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/YouTube-Rewind-2019.jpg);
+}
+
+.topics article ul {
+  padding: 0 15px;
+}
+
+.topics article ul li:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.topics article ul li::marker {
+  color: orangered;
+  font-size: 10px;
+}
+
+.deals {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.deals article:nth-of-type(1) figure {
+  background-image: url(https://cdnp0.stackassets.com/17171c9342ee8910c3d0a2b7d847d5147d92f4ff/store/f2f82645f4f46d4be5f09ead0b28234e9e1bbe70aa1cb7b56fb004fa9a3a/sale_7147_primary_image.jpg);
+}
+
+.deals article:nth-of-type(2) figure {
+  background-image: url(https://cdnp1.stackassets.com/a1885052002064f3903e6c4d22b09695ee1224e5/store/6ad863301975cc44ff2d8ca2233009444670eee3b2e453cc521275dd1a09/sale_24048_primary_image.jpg);
+}
+
+.deals article:nth-of-type(3) figure {
+  background-image: url(https://cdnp0.stackassets.com/0bcaf472e484efc5812ba81caff99e8d92b3e6e9/store/a608033f5bd5c0926a52360990ea5bd8a7241593db592e096d16df200727/product_30218_product_shots4.jpg);
+}
+
+.deals article:nth-of-type(4) figure {
+  background-image: url(https://cdnp0.stackassets.com/72ec5f6be82aa335c0705e20589a5f323ebb7cbb/store/627accf6e5520cc7b240d6376619f1ade8d7b9cad265639ffc6acbe89a96/sale_20564_primary_image.jpg);
+}
+
+.deals article:nth-of-type(5) figure {
+  background-image: url(https://cdnp2.stackassets.com/6c92b9e0653335dbb5262c7fb7f7a37803580253/store/48e4af10ff7e59d73ce8784413003f33292e1da457bb6b1779ec13867826/sale_24049_primary_image.jpg);
+}
+
+.deals article:nth-of-type(6) figure {
+  background-image: url(https://cdnp0.stackassets.com/6d70d23d7f4e176c14ed33f15da993c8988dcd4b/store/63ac50970ccd31374bbc4cf9f7fbbbf9444d63c6b8bb4f4e458076224adf/sale_20151_primary_image.jpg);
+}
+
+.deals article:nth-of-type(7) figure {
+  background-image: url(https://cdnp3.stackassets.com/3d16aa2f408257fe8531ec4866fadb1ca8ff6620/store/e3161d75d40304c41826f645b9ce1115795c32e6723b659977c775db0854/product_23619_product_shots1_image.jpg);
+}
+
+.deals article:nth-of-type(8) figure {
+  background-image: url(https://cdnp0.stackassets.com/c11e9b63abc32b2f0d57b195ebf30199249701cb/store/2dc1dd425b6bbead7647a3be7ce6068480c90a8025f80de38865cc0126e4/sale_24047_primary_image.jpg);
+}
+
+.deals article > div span:nth-child(1) {
+  font-family: Maquette, sans-serif;
+  font-size: 13px;
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+.deals article > div span:nth-child(2) {
+  font-family: Maquette, sans-serif;
+  font-size: 16px;
+  color: #555;
+}
+
+footer {
+  background: #131313;
+  display: flex;
+  justify-content: center;
+}
+
+.social ul:nth-of-type(1) {
+  padding-top: 42px;
+  padding-bottom: 21px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social ul:nth-of-type(2) {
+  padding-top: 21px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bottomOne {
+  color: #333;
+  border: 2px solid #333;
+  background: #333;
+  border-radius: 60px;
+  width: fit-content;
+  font-size: 2.5em;
+}
+
+.iconWrapF {
+  margin: 0 10px;
+}
+
+.iconWrap:hover .bottomOne {
+  color: #000;
+}
+
+.topOne {
+  color: #fff;
+  font-size: 16px;
+  top: 5.5px;
+  left: 3px;
+}
+
+.copyright {
+  color: #aaa;
+  font-family: Maquette, sans-serif;
+  font-size: 13px;
+  padding: 39px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .outLinks,
+  header {
+    padding-left: 116px;
+  }
+
+  header nav ul li {
+    margin-left: 12px;
+  }
+
+  .trending .biggerTitle {
+    font-size: 40px;
+  }
+
+  .trending article h2 {
+    font-size: 20px;
+  }
+
+  .trending article .gradient {
+    display: none;
+  }
+
+  .topTrend {
+    width: 106px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    z-index: 200;
+    background: linear-gradient(to right bottom, rgb(204, 0, 153), rgb(255, 68, 34) 85%);
+  }
+
+  .topTrend span {
+    display: none;
+  }
+
+  .topTrend img {
+    position: relative;
+    top: 10px;
+    height: 15px;
+  }
+
+  .wrap-row {
+    max-width: 33.3333%;
+  }
+
+  .latest article h3 {
+    font-size: 14px;
+  }
+
+  .topics article {
+    width: 50%;
+  }
+
+  .deals article {
+    width: 33.3333%;
+  }
+
+  .funding article:nth-last-child(1) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .outLinks {
+    display: none;
+  }
+
+  header {
+    top: 0;
+    justify-content: flex-end;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  .menuWrap {
+    display: flex;
+  }
+
+  .topTrend {
+    height: 48px;
+  }
+
+  .topTrend img {
+    top: -5px;
+  }
+
+  .trending .biggerTitle {
+    font-size: 20px;
+  }
+
+  .main > * {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  body > *:not(.nomove) {
+    top: 56px;
+  }
+
+  .trending {
+    height: calc(100vh - 48px);
+    max-height: unset;
+    grid-template-areas:
+      "a1 a1"
+      "a1 a1"
+      "a2 a2"
+      "a2 a2"
+      "a3 a3"
+      "a3 a3";
+  }
+
+  .wrap-row {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .latest > article {
+    display: flex;
+  }
+
+  .deals figure {
+    width: 75px;
+    height: 75px;
+    flex: none;
+  }
+
+  .latest > article figure {
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    flex: none;
+  }
+
+  .latest > article img {
+    height: 100%;
+    width: unset;
+    margin: 0 auto;
+  }
+
+  .latest > article > div {
+    flex: 1;
+    margin-left: 15px;
+    line-height: 25px;
+  }
+
+  .fundingTop {
+    display: block;
+  }
+
+  .fundingTop ul li {
+    display: block;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+
+  .fundingTop a {
+    font-size: 14px;
+  }
+
+  .fundingTop ul li:nth-child(2) {
+    border: none;
+  }
+
+  .deals figure div {
+    display: none;
+  }
+
+  .deals article > div {
+    margin-left: 15px;
+  }
+
+  .funding .fundingHeader div {
+    padding: 10px 0 10px 100px;
+  }
+
+  .topics {
+    width: unset;
+  }
+
+  .topics article {
+    width: 100%;
+  }
+
+  .deals article {
+    display: flex;
+    width: 100%;
+  }
+
+  .deals article a {
+    font-size: 14px;
+  }
+
+  .deals article > div span:nth-child(1) {
+    font-size: 12px;
+  }
+
+  .deals article > div span:nth-child(2) {
+    font-size: 14px;
+  }
+
+  .copyright {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
