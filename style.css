@@ -42,7 +42,11 @@
   padding: 0;
 }
 
-body>*:not(.nomove) {
+header * {
+  height: 100%;
+}
+
+body > *:not(.nomove) {
   position: relative;
   top: 90px;
 }
@@ -59,6 +63,12 @@ body>*:not(.nomove) {
   z-index: 10;
 }
 
+header nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
 .outLinks li {
   padding-left: 12px;
 }
@@ -71,10 +81,115 @@ body>*:not(.nomove) {
   align-items: center;
 }
 
+header nav ul a {
+  font-family: Shentox, sans-serif;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.fundingTop a {
+  font-family: Maquette, sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: #f42;
+}
+
+.fundingFooter a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: Maquette, sans-serif;
+}
+
 .outLinks ul a {
   color: rgba(255, 255, 255, 0.6);
   font-family: 'Maquette', sans-serif;
   text-decoration: none;
+}
+
+.trending article a {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.deals h2 a,
+.funding h2 a,
+.latest h2 a,
+.topics h2 a {
+  text-decoration: none;
+  font-family: Avalon, sans-serif;
+  font-size: 28px;
+  color: #f42;
+}
+
+.topics figure a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.topicsLatest h4 a {
+  font-family: Maquette, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: unset;
+  font-weight: 700;
+}
+
+.deals figure a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.deals article a {
+  color: #000;
+  text-decoration: none;
+}
+
+.topics article ul li a {
+  text-decoration: none;
+  color: unset;
+}
+
+header nav ul li:hover a {
+  color: #000;
+}
+
+.latest .wrap-row a {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.funding .wrap-row > a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.fundingTop a:hover {
+  color: black;
+}
+
+.funding .fundingInfo a {
+  color: #555;
+  text-decoration: none;
+  font-size: 13px;
+  font-family: Maquette, sans-serif;
+}
+
+.topicsLatest .sideImg a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 
 .outLinks ul a:hover {
@@ -93,11 +208,8 @@ header {
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.15);
 }
 
-header * {
-  height: 100%;
-}
-
-.iconWrap, .menuWrap {
+.iconWrap,
+.menuWrap {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,19 +227,16 @@ header i {
   height: 16px;
 }
 
-header nav ul li {
-  display: inline-block;
-  margin-left: 20px;
-  font-size: 14px;
+.iconWrap:hover {
+  cursor: pointer;
 }
 
-header nav ul a {
-  font-family: Shentox, sans-serif;
-  display: inline-block;
-  display: flex;
-  align-items: center;
-  color: #aaa;
-  text-decoration: none;
+.fundingInfo i {
+  color: black;
+}
+
+.iconWrap:hover i {
+  color: #555;
 }
 
 .main {
@@ -158,14 +267,6 @@ header nav ul a {
   position: relative;
 }
 
-.trending article a {
-  display: inline-block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-}
-
 .gradient {
   height: 100%;
   background: linear-gradient(-13deg, transparent, #ff6b6b);
@@ -177,6 +278,34 @@ header nav ul a {
   justify-content: space-between;
 }
 
+.latest h2 {
+  width: 100%;
+}
+
+.deals h2,
+.funding h2,
+.latest h2,
+.topics h2 {
+  display: block;
+  font-family: Avalon, sans-serif;
+  font-size: 28px;
+  color: #f42;
+  flex: none;
+  margin-bottom: 24px;
+}
+
+.topics > h2 {
+  display: none;
+}
+
+.topics h2 {
+  margin-bottom: 14px;
+}
+
+.deals h2 {
+  width: 100%;
+}
+
 .trending article h2 {
   font-family: Avalon, sans-serif;
   font-size: 28px;
@@ -184,6 +313,34 @@ header nav ul a {
 
 .trending .biggerTitle {
   font-size: 52px;
+}
+
+.fundingHeader span {
+  font-family: Shentox, sans-serif;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.topicsLatest span {
+  font-size: 13px;
+  font-family: Shentox, sans-serif;
+}
+
+.latest article span {
+  font-family: Maquette, sans-serif;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.deals figure div span {
+  display: inline-block;
+  font-family: Maquette, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  transform: rotate(45deg);
+  position: relative;
+  top: 20px;
+  left: 20px;
 }
 
 .bottomTrend span:nth-child(1) {
@@ -194,6 +351,23 @@ header nav ul a {
 .bottomTrend span:nth-child(3) {
   font-family: Maquette, sans-serif;
   font-size: 13px;
+}
+
+.funding article {
+  position: relative;
+  width: 560px;
+  max-height: 295px;
+  overflow: hidden;
+}
+
+.topics article {
+  padding: 20px;
+  max-width: 33.3333%;
+}
+
+.deals article {
+  max-width: 25%;
+  padding: 12px;
 }
 
 .trending article:nth-of-type(1) {
@@ -253,54 +427,20 @@ header nav ul a {
   margin: 50px 10px;
 }
 
-.latest h2 {
-  width: 100%;
-}
-
-.latest h2,
-.funding h2,
-.topics h2,
-.deals h2 {
-  display: block;
-  font-family: Avalon, sans-serif;
-  font-size: 28px;
-  color: #f42;
-  flex: none;
-  margin-bottom: 24px;
-}
-
-.latest h2 a,
-.funding h2 a,
-.topics h2 a,
-.deals h2 a {
-  text-decoration: none;
-  font-family: Avalon, sans-serif;
-  font-size: 28px;
-  color: #f42;
-}
-
 .wrap-row {
   max-width: 25%;
   padding: 10px;
   position: relative;
 }
 
-.latest .wrap-row a {
-  position: absolute;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
+.funding article > h5 {
+  display: none;
 }
 
-.funding .wrap-row>a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-}
-
-.wrap-row a:hover~ div h3 {
-  color: #f42;
-  text-decoration: underline;
+.deals h3 {
+  font-family: Maquette, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .latest article h3 {
@@ -308,13 +448,26 @@ header nav ul a {
   font-size: 16px;
 }
 
-.latest article span {
+.topics figure h3 {
   font-family: Maquette, sans-serif;
-  font-size: 13px;
-  color: #aaa;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-.latest>article img {
+.wrap-row a:hover ~ div h3 {
+  color: #f42;
+  text-decoration: underline;
+}
+
+.fundingHeader img {
+  width: 60px;
+}
+
+.copyright img {
+  height: 9px;
+}
+
+.latest > article img {
   width: 100%;
 }
 
@@ -329,12 +482,6 @@ header nav ul a {
 .funding strong {
   color: black;
   font-size: 18px;
-}
-
-.fundingHeader span {
-  font-family: Shentox, sans-serif;
-  font-size: 12px;
-  color: #aaa;
 }
 
 .fundingTop {
@@ -352,33 +499,27 @@ header nav ul a {
   margin-bottom: 24px;
 }
 
+.social li {
+  display: inline-block;
+}
+
 .fundingTop ul li {
   padding: 0 11px;
   display: inline-block;
 }
 
-.fundingTop a {
+.topics article ul li {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
   font-family: Maquette, sans-serif;
-  font-size: 16px;
-  text-decoration: none;
-  color: #f42;
-}
-
-.fundingTop a:hover {
-  color: black;
+  font-size: 13px;
+  color: #555;
 }
 
 .fundingTop ul li:nth-child(2) {
   border-left: 1px solid;
   border-right: 1px solid;
   border-color: #f42;
-}
-
-.funding article {
-  position: relative;
-  width: 560px;
-  max-height: 295px;
-  overflow: hidden;
 }
 
 .funding article img {
@@ -391,12 +532,22 @@ header nav ul a {
   font-family: Avalon, sans-serif;
 }
 
-.fundingHeader img {
-  width: 60px;
+.deals figure div {
+  width: 80px;
+  height: 80px;
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/deals-ribbon.svg);
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .funding .fundingHeader div {
   padding: 10px 0 10px 80px;
+}
+
+.topicsLatest div:not(.sideImg) {
+  padding: 15px 10px 0 15px;
 }
 
 .funding .fundingHeader div:nth-of-type(1) {
@@ -415,22 +566,23 @@ header nav ul a {
   background: #fffaf8;
 }
 
-.funding .fundingInfo a {
-  color: #555;
-  text-decoration: none;
-  font-size: 13px;
-  font-family: Maquette, sans-serif;
-}
-
-.funding .fundingInfo a:hover {
-  color: black;
-}
-
 .topics h2 a:hover {
   color: black;
 }
 
-.fundingInfo i {
+.topicsLatest h4 a:hover {
+  text-decoration: underline rgba(255, 68, 34, 0.2);
+}
+
+.social ul:nth-of-type(2) li a {
+  font-family: Shentox, sans-serif;
+  font-size: 13px;
+  margin: 0 6px;
+  color: white;
+  text-decoration: none;
+}
+
+.funding .fundingInfo a:hover {
   color: black;
 }
 
@@ -444,13 +596,6 @@ header nav ul a {
   height: 100%;
 }
 
-.fundingFooter a {
-  color: #AAA;
-  text-decoration: none;
-  font-size: 12px;
-  font-family: Maquette, sans-serif;
-}
-
 .fundingFooter span:nth-last-child(1) {
   color: #999;
 }
@@ -461,17 +606,17 @@ header nav ul a {
   width: 100%;
 }
 
-.topics h2 {
-  margin-bottom: 14px;
-}
-
-.topics article {
-  padding: 20px;
-  max-width: 33.3333%;
-}
-
-.topics article>ul {
+.topics article > ul {
   padding: 15px;
+}
+
+.deals figure {
+  position: relative;
+  margin-bottom: 8px;
+  width: 100%;
+  height: 201px;
+  background-position: left;
+  background-size: cover;
 }
 
 .topics article figure {
@@ -486,13 +631,7 @@ header nav ul a {
   background-size: cover;
 }
 
-.topics figure a {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
-.topics figure a:hover~figcaption h3 {
+.topics figure a:hover ~ figcaption h3 {
   text-decoration: underline rgba(255, 255, 255, 0.6);
 }
 
@@ -542,12 +681,6 @@ header nav ul a {
   font-size: 13px;
 }
 
-.topics figure h3 {
-  font-family: Maquette, sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-}
-
 .topics figure span:nth-of-type(2) {
   font-family: Maquette, sans-serif;
   font-size: 12px;
@@ -561,39 +694,12 @@ header nav ul a {
   color: #f42;
 }
 
-.topicsLatest div:not(.sideImg) {
-  padding: 15px 10px 0 15px;
-}
-
-.topicsLatest span {
-  font-size: 13px;
-  font-family: Shentox, sans-serif;
-}
-
-.topicsLatest h4 a {
-  font-family: Maquette, sans-serif;
-  font-size: 14px;
-  text-decoration: none;
-  color: unset;
-  font-weight: 700;
-}
-
-.topicsLatest h4 a:hover {
-  text-decoration: underline rgba(255, 68, 34, 0.2);
-}
-
 .topicsLatest .sideImg {
   width: 96px;
   height: 96px;
   background-size: cover;
   background-position: center;
   flex: none;
-}
-
-.topicsLatest .sideImg a {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
 }
 
 .topics article:nth-of-type(1) .sideImg {
@@ -632,19 +738,6 @@ header nav ul a {
   padding: 0 15px;
 }
 
-.topics article ul li a {
-  text-decoration: none;
-  color: unset;
-}
-
-.topics article ul li {
-  border-bottom: 1px solid #eee;
-  padding: 10px 0;
-  font-family: Maquette, sans-serif;
-  font-size: 13px;
-  color: #555;
-}
-
 .topics article ul li:hover {
   color: #000;
   cursor: pointer;
@@ -658,52 +751,6 @@ header nav ul a {
 .deals {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-}
-
-.deals h2 {
-  width: 100%;
-}
-
-.deals article {
-  max-width: 25%;
-  padding: 12px;
-}
-
-.deals figure {
-  position: relative;
-  margin-bottom: 8px;
-  width: 100%;
-  height: 201px;
-  background-position: left;
-  background-size: cover;
-}
-
-.deals figure a {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-}
-
-.deals figure div {
-  width: 80px;
-  height: 80px;
-  background-image: url(https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/deals-ribbon.svg);
-  background-size: cover;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.deals figure div span {
-  display: inline-block;
-  font-family: Maquette, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  transform: rotate(45deg);
-  position: relative;
-  top: 20px;
-  left: 20px;
 }
 
 .deals article:nth-of-type(1) figure {
@@ -738,25 +785,14 @@ header nav ul a {
   background-image: url(https://cdnp0.stackassets.com/c11e9b63abc32b2f0d57b195ebf30199249701cb/store/2dc1dd425b6bbead7647a3be7ce6068480c90a8025f80de38865cc0126e4/sale_24047_primary_image.jpg);
 }
 
-.deals article a {
-  color: #000;
-  text-decoration: none;
-}
-
-.deals h3 {
-  font-family: Maquette, sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.deals article>div span:nth-child(1) {
+.deals article > div span:nth-child(1) {
   font-family: Maquette, sans-serif;
   font-size: 13px;
   color: #aaa;
   text-decoration: line-through;
 }
 
-.deals article>div span:nth-child(2) {
+.deals article > div span:nth-child(2) {
   font-family: Maquette, sans-serif;
   font-size: 16px;
   color: #555;
@@ -774,24 +810,13 @@ footer {
   list-style: none;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .social ul:nth-of-type(2) {
   padding-top: 21px;
   display: flex;
   justify-content: center;
-}
-
-.social ul:nth-of-type(2) li a {
-  font-family: Shentox, sans-serif;
-  font-size: 13px;
-  margin: 0 6px;
-  color: white;
-  text-decoration: none;
-}
-
-.social li {
-  display: inline-block;
 }
 
 .bottomOne {
@@ -814,24 +839,19 @@ footer {
 .topOne {
   color: #fff;
   font-size: 16px;
-  left: 2.8px;
   top: 5.5px;
 }
 
-.copyright img {
-  height: 9px;
-}
-
 .copyright {
-  color: #AAA;
+  color: #aaa;
   font-family: Maquette, sans-serif;
   font-size: 13px;
   padding: 39px 0;
 }
 
 @media screen and (max-width: 1024px) {
-
-  .outLinks, header {
+  .outLinks,
+  header {
     padding-left: 116px;
   }
 
@@ -879,10 +899,6 @@ footer {
     font-size: 14px;
   }
 
-  .funding article:nth-last-child(1) {
-    display: none;
-  }
-
   .topics article {
     max-width: 50%;
   }
@@ -890,8 +906,11 @@ footer {
   .deals article {
     max-width: 33.3333%;
   }
-}
 
+  .funding article:nth-last-child(1) {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .outLinks {
@@ -919,19 +938,19 @@ footer {
     top: -5px;
   }
 
-  body>*:not(.nomove) {
-    top: 56px;
-  }
-
   .main > * {
     margin-left: 20px;
     margin-right: 20px;
   }
 
+  body > *:not(.nomove) {
+    top: 56px;
+  }
+
   .trending {
     height: calc(100vh - 48px);
     max-height: unset;
-    grid-template-areas: 
+    grid-template-areas:
       "a1 a1"
       "a1 a1"
       "a2 a2"
@@ -948,6 +967,12 @@ footer {
 
   .latest > article {
     display: flex;
+  }
+
+  .deals figure {
+    width: 75px;
+    height: 75px;
+    flex: none;
   }
 
   .latest > article figure {
@@ -987,6 +1012,14 @@ footer {
     border: none;
   }
 
+  .deals figure div {
+    display: none;
+  }
+
+  .deals article > div {
+    margin-left: 15px;
+  }
+
   .funding .fundingHeader div {
     padding: 10px 0 10px 100px;
   }
@@ -999,28 +1032,15 @@ footer {
     max-width: 100%;
   }
 
-  .deals figure div {
-    display: none;
-  }
-
-  .deals figure {
-    width: 75px;
-    height: 75px;
-    flex: none;
-  }
-
   .deals article {
     display: flex;
     max-width: 100%;
   }
 
-  .deals article > div {
-    margin-left: 15px;
-  }
-
   .deals article a {
     font-size: 14px;
   }
+
   .deals article > div span:nth-child(1) {
     font-size: 12px;
   }
