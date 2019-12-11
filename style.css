@@ -366,13 +366,14 @@ header i {
 }
 
 .deals article {
-  max-width: 25%;
+  width: 25%;
   padding: 12px;
 }
 
 .trending article:nth-of-type(1) {
   background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Snag_3cdaf987-796x435.png") no-repeat;
   background-size: cover;
+  background-position: center;
   grid-area: a1;
 }
 
@@ -501,6 +502,7 @@ header i {
 
 .social li {
   display: inline-block;
+  padding-top: 15px;
 }
 
 .fundingTop ul li {
@@ -692,6 +694,7 @@ header i {
   display: flex;
   background-color: rgba(255, 68, 34, 0.06);
   color: #f42;
+  overflow: hidden;
 }
 
 .topicsLatest .sideImg {
@@ -817,6 +820,7 @@ footer {
   padding-top: 21px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .bottomOne {
@@ -904,7 +908,7 @@ footer {
   }
 
   .deals article {
-    max-width: 33.3333%;
+    width: 33.3333%;
   }
 
   .funding article:nth-last-child(1) {
@@ -936,6 +940,10 @@ footer {
 
   .topTrend img {
     top: -5px;
+  }
+
+  .trending .biggerTitle {
+    font-size: 20px;
   }
 
   .main > * {
@@ -1034,7 +1042,7 @@ footer {
 
   .deals article {
     display: flex;
-    max-width: 100%;
+    width: 100%;
   }
 
   .deals article a {
